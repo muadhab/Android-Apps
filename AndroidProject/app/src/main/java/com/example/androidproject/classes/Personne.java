@@ -1,7 +1,5 @@
-package com.example.androidproject.classes;
+package com.example.androidproject.Classes;
 
-
-import java.util.Date;
 
 public class Personne {
 

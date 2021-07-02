@@ -1,4 +1,4 @@
-package com.example.androidproject.validations;
+package com.example.androidproject.Validations;
 
 import android.app.Activity;
 import android.content.Context;

@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject">
-        <activity android:name=".Welcome"></activity>
+        <activity android:name=".Classes.page2"></activity>
+        <activity android:name=".Classes.page1" />
+        <activity android:name=".Classes.login_patient" />
+        <activity android:name=".Classes.login_medecin" />
+        <activity android:name=".Classes.login_inferm" />
+        <activity android:name=".Classes.login_admin" />
+        <activity android:name=".Classes.index_admin" />
+        <activity android:name=".Welcome" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
