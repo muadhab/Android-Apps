@@ -8,64 +8,79 @@
     tools:context=".MainActivity"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:paddingVertical="35dp"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        android:fontFamily="cursive"
-        android:textColor="@color/black"
-        android:layout_marginBottom="25dp"
-        android:background="@drawable/corona2"
-        android:gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:fontFamily="cursive"
-        android:gravity="center_horizontal"
-        android:paddingVertical="35dp"
-        android:text="@string/login"
-        android:textAlignment="center"
-        android:textColor="#1D4BE6"
-        android:textSize="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:paddingVertical="35dp"
+            android:textAlignment="center"
+            android:textSize="60sp"
+            android:fontFamily="cursive"
+            android:textColor="@color/black"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/corona2"
+            android:gravity="center_horizontal" />
 
-    <EditText
-        android:id="@+id/TxtUsername"
-        android:layout_width="match_parent"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="cursive"
+            android:gravity="center_horizontal"
+            android:paddingVertical="35dp"
+            android:text="Bienvenue"
+            android:textAlignment="center"
+            android:textColor="#1D4BE6"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="cursive"
+            android:gravity="center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="vous êtes :"
+            android:textAlignment="center"
+            android:textColor="#1D4BE6"
+            android:textSize="30dp" />
 
-        android:layout_height="66dp"
-        android:layout_marginHorizontal="30dp"
-        android:hint=" Username" />
 
-    <EditText
-        android:id="@+id/TxtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="30dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingHorizontal="12dp"
-        android:paddingVertical="20dp" />
 
-    <Button
-        android:id="@+id/Btn_Login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="20dp"
-        android:background="@drawable/button_bg"
-        android:text="Login"
-        android:textColor="@color/white" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="No Account yet? create One"
-        android:layout_marginHorizontal="30dp"
-        android:textAlignment="center"
-        android:gravity="center_horizontal" />
-</LinearLayout>
+        <Button
+            android:id="@+id/Btn_staff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/button_bg"
+            android:text="STAFF"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/Btn_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/button_bg"
+            android:text="PaTIENT"
+            android:textColor="@color/white" />
+        <Button
+            android:id="@+id/Btn_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="20dp"
+            android:background="@drawable/button_bg"
+            android:text="contacter nous"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="projet android @TEK-UP UNIVERSITY "
+            android:layout_marginHorizontal="30dp"
+            android:textAlignment="center"
+            android:gravity="center_horizontal" />
+    </LinearLayout>
 
 

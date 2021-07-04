@@ -6,17 +6,27 @@ public class Reservation {
     private int id_patient;
     private int id_medecin;
     private int id_infermier;
+    private int id_centre;
 
 
     public Reservation() {
     }
 
-    public Reservation(int id, String date, int id_patient, int id_medecin, int id_infermier) {
+    public Reservation(int id, String date, int id_patient, int id_medecin, int id_infermier,int id_centre) {
         this.id = id;
         this.date = date;
         this.id_patient = id_patient;
         this.id_medecin = id_medecin;
         this.id_infermier = id_infermier;
+        this.id_centre=id_centre;
+    }
+
+    public int getId_centre() {
+        return id_centre;
+    }
+
+    public void setId_centre(int id_centre) {
+        this.id_centre = id_centre;
     }
 
     public int getId() {

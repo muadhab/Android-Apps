@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+<ImageView
+
+    android:id="@+id/image"
+    android:src="@drawable/images"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    />
+
+
+    <TextView
+        android:id="@+id/cin"
+        android:text="CIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/image"
+        android:layout_toRightOf="@+id/image"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/patient_name"
+        android:text="NOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cin"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/image"
+        android:layout_toRightOf="@+id/image"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/patient_prenom"
+        android:text="PRENOM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/patient_name"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@+id/image"
+        android:layout_toRightOf="@+id/image"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:text="Confirmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="35dp"
+        android:layout_toEndOf="@+id/patient_name"
+        android:layout_toRightOf="@+id/patient_name"
+        android:background="#8595B4"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

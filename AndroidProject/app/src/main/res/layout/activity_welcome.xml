@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Welcome"
+        tools:context=".IndexMedecin">
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="wrap_content"
+        android:elevation="2dp"
+        android:background="#fff"
+        android:layout_height="wrap_content">
+    </SearchView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Patient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
         >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="151dp"
-        android:layout_height="84dp"
-        android:text="Welcome "
-        android:textSize="23sp"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="312dp" />
+    </androidx.recyclerview.widget.RecyclerView>
 
-</LinearLayout>
+
+</RelativeLayout>

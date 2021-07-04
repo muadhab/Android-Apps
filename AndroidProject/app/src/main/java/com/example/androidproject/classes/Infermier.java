@@ -108,4 +108,20 @@ public class Infermier {
     public void setId_centre(int id_centre) {
         this.id_centre = id_centre;
     }
+
+    @Override
+    public String toString() {
+        return "Infermier{" +
+                "id=" + id +
+                ", cin=" + cin +
+                ", nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", email='" + email + '\'' +
+                ", date_naissance='" + date_naissance + '\'' +
+                ", password='" + password + '\'' +
+                ", telephone='" + telephone + '\'' +
+                ", matricule='" + matricule + '\'' +
+                ", id_centre=" + id_centre +
+                '}';
+    }
 }

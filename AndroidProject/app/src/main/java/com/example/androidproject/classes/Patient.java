@@ -5,6 +5,7 @@ public class Patient {
     private int id;
     private String nom;
     private String prenom;
+    private String cin;
     private String email;
     private String phone;
     private String birthday;
@@ -19,7 +20,7 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(int id, String nom, String prenom, String email, String phone, String birthday, String password, int status, int nbr_vaccin, int id_vaccin, int id_centre) {
+    public Patient(int id, String nom, String prenom, String cin, String email, String phone, String birthday, String password, int status, int nbr_vaccin, int id_vaccin, int id_centre) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
@@ -31,14 +32,7 @@ public class Patient {
         this.nbr_vaccin = nbr_vaccin;
         this.id_vaccin = id_vaccin;
         this.id_centre = id_centre;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+        this.cin=cin;
     }
 
     public int getId() {
@@ -49,12 +43,28 @@ public class Patient {
         this.id = id;
     }
 
-    public String getName() {
+    public String getNom() {
         return nom;
     }
 
-    public void setName(String name) {
-        this.nom = name;
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getCin() {
+        return cin;
+    }
+
+    public void setCin(String cin) {
+        this.cin = cin;
     }
 
     public String getEmail() {
@@ -89,7 +99,6 @@ public class Patient {
         this.password = password;
     }
 
-
     public int getStatus() {
         return status;
     }
@@ -121,7 +130,4 @@ public class Patient {
     public void setId_centre(int id_centre) {
         this.id_centre = id_centre;
     }
-
-
-
 }

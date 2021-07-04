@@ -1,4 +1,4 @@
-package com.example.androidproject.database;
+package com.example.androidproject.Database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Evax.db";
 
 
-    /*  Tables list  */
+                 /*  Tables list  */
     // PATIENT table name
     private static final String TABLE_PATIENT= "patient";
     // MEDECIN table name
@@ -94,6 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_PATIENT_ID = "PATIENT_id";
     private static final String COLUMN_PATIENT_NOM = "PATIENT_nom";
     private static final String COLUMN_PATIENT_PRENOM = "PATIENT_preom";
+    private static final String COLUMN_PATIENT_CIN="PATIENT_cin";
     private static final String COLUMN_PATIENT_PHONE = "PATIENT_phone";
     private static final String COLUMN_PATIENT_EMAIL = "PATIENT_email";
     private static final String COLUMN_PATIENT_BIRTHDAY = "PATIENT_birthday";
@@ -184,7 +185,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // create Patient sql query
 
     private String CREATE_PATIENT_TABLE = "CREATE TABLE " + TABLE_PATIENT+ "("
-            + COLUMN_PATIENT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_PATIENT_NOM + " TEXT,"+ COLUMN_PATIENT_PRENOM + " TEXT,"
+            + COLUMN_PATIENT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_PATIENT_NOM + " TEXT,"+ COLUMN_PATIENT_PRENOM + " TEXT,"+ COLUMN_PATIENT_CIN + " TEXT,"
             + COLUMN_PATIENT_PHONE + " TEXT," + COLUMN_PATIENT_EMAIL + " TEXT,"  + COLUMN_PATIENT_BIRTHDAY + " TEXT,"
             + COLUMN_PATIENT_PASSWORD + " TEXT," + COLUMN_PATIENT_STATUS + " INTEGER,"  + COLUMN_PATIENT_NBRVCCN + " INTEGER,"
             + COLUMN_PATIENT_VACCIN_ID + " INTEGER," + COLUMN_PATIENT_CENTRE_ID + " INTEGER,"
@@ -288,8 +289,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PATIENT_NOM, PATIENT.getName());
+        values.put(COLUMN_PATIENT_NOM, PATIENT.getNom());
         values.put(COLUMN_PATIENT_PRENOM, PATIENT.getPrenom());
+        values.put(COLUMN_PATIENT_CIN, PATIENT.getCin());
         values.put(COLUMN_PATIENT_PASSWORD, PATIENT.getPassword());
         values.put(COLUMN_PATIENT_BIRTHDAY, PATIENT.getBirthday());
         values.put(COLUMN_PATIENT_EMAIL, PATIENT.getEmail());
@@ -344,10 +346,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_ADMIN_PASSWORD,administrateur.getPassword());
 
 
-        // Inserting Row
+    // Inserting Row
         db.insert(TABLE_ADMINISTRATEUR, null, values);
-        //db.close();
-    }
+    //db.close();
+}
 
 
     public void addINFERMIER(Infermier INFERMIER) {
@@ -368,62 +370,63 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void addCabine(Cabine cabine)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_CABINE_NAME,cabine.getNom());
-        values.put(COLUMN_CABINE_CENTRE,cabine.getId_centre());
-        // Inserting Row
-        db.insert(TABLE_CENTRE, null, values);
-        //db.close();
-    }
+public void addCabine(Cabine cabine)
+{
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(COLUMN_CABINE_NAME,cabine.getNom());
+    values.put(COLUMN_CABINE_CENTRE,cabine.getId_centre());
+    // Inserting Row
+    db.insert(TABLE_CENTRE, null, values);
+    //db.close();
+}
 
 
-    public void addVaccin(Vaccin vaccin)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_VACCIN_NAME,vaccin.getNom());
-        values.put(COLUMN_VACCIN_REF,vaccin.getRef());
-        values.put(COLUMN_VACCIN_QTE,vaccin.getQte());
+public void addVaccin(Vaccin vaccin)
+{
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(COLUMN_VACCIN_NAME,vaccin.getNom());
+    values.put(COLUMN_VACCIN_REF,vaccin.getRef());
+    values.put(COLUMN_VACCIN_QTE,vaccin.getQte());
 
-        // Inserting Row
-        db.insert(TABLE_VACCIN, null, values);
-        //db.close();
+    // Inserting Row
+    db.insert(TABLE_VACCIN, null, values);
+    //db.close();
 
-    }
-
-
-    public void addStatus(Status status)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_STATUS_NAME,status.getStatus());
-
-        // Inserting Row
-        db.insert(TABLE_STATUS, null, values);
-        //db.close();
-
-    }
+}
 
 
+public void addStatus(Status status)
+
+{
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(COLUMN_STATUS_NAME,status.getStatus());
+
+    // Inserting Row
+    db.insert(TABLE_STATUS, null, values);
+    //db.close();
+
+}
 
 
-    public void addReservation(Reservation reservation)
-    {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_RESERVATION_DATE,reservation.getDate());
-        values.put(COLUMN_RESERVATION_INFERMIER_ID,reservation.getId_infermier());
-        values.put(COLUMN_PATIENT_VACCIN_ID,reservation.getId_medecin());
-        values.put(COLUMN_RESERVATION_MEDECIN_ID,reservation.getId_medecin());
 
-        // Inserting Row
-        db.insert(TABLE_RESERVATION, null, values);
-        //db.close();
 
-    }
+public void addReservation(Reservation reservation)
+{
+    SQLiteDatabase db = this.getWritableDatabase();
+    ContentValues values = new ContentValues();
+    values.put(COLUMN_RESERVATION_DATE,reservation.getDate());
+    values.put(COLUMN_RESERVATION_INFERMIER_ID,reservation.getId_infermier());
+    values.put(COLUMN_PATIENT_VACCIN_ID,reservation.getId_medecin());
+    values.put(COLUMN_RESERVATION_MEDECIN_ID,reservation.getId_medecin());
+
+    // Inserting Row
+    db.insert(TABLE_RESERVATION, null, values);
+    //db.close();
+
+}
 
 
     /**
@@ -437,6 +440,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_PATIENT_ID,
                 COLUMN_PATIENT_NOM,
                 COLUMN_PATIENT_PRENOM,
+                COLUMN_PATIENT_CIN,
                 COLUMN_PATIENT_EMAIL,
                 COLUMN_PATIENT_PASSWORD,
                 COLUMN_PATIENT_PHONE,
@@ -471,8 +475,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             do {
                 Patient PATIENT = new Patient();
                 PATIENT.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_ID))));
-                PATIENT.setName(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_NOM)));
+                PATIENT.setNom(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_NOM)));
+                PATIENT.setPrenom(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_PRENOM)));
                 PATIENT.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_EMAIL)));
+                PATIENT.setCin(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_CIN)));
                 PATIENT.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_PASSWORD)));
                 PATIENT.setBirthday(cursor.getString(cursor.getColumnIndex(COLUMN_PATIENT_BIRTHDAY)));
                 PATIENT.setNbr_vaccin(cursor.getInt(cursor.getColumnIndex(COLUMN_PATIENT_NBRVCCN)));
@@ -482,7 +488,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         cursor.close();
-        // db.close();
+       // db.close();
 
         // return PATIENTlist
         return PATIENTList;
@@ -496,7 +502,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PATIENT_NOM, PATIENT.getName());
+        values.put(COLUMN_PATIENT_NOM, PATIENT.getNom());
         values.put(COLUMN_PATIENT_EMAIL, PATIENT.getEmail());
         values.put(COLUMN_PATIENT_PASSWORD, PATIENT.getPassword());
         values.put(COLUMN_PATIENT_BIRTHDAY,PATIENT.getBirthday());
@@ -509,6 +515,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[]{String.valueOf(PATIENT.getId())});
         db.close();
     }
+
+
 
     /**
      * This method is to delete PATIENTrecord
@@ -549,7 +557,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
          * SQL query equivalent to this query function is
          * SELECT PATIENT_id FROM PATIENTWHERE PATIENT_email = 'jack@androidtutorialshub.com';
          */
-        Cursor cursor = db.query(TABLE_PATIENT, //Table to query
+       Cursor cursor = db.query(TABLE_PATIENT, //Table to query
                 columns,                    //columns to return
                 selection,                  //columns for the WHERE clause
                 selectionArgs,              //The values for the WHERE clause
@@ -566,14 +574,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         return false;
     }
-    /*
-        /**
-         * This method to check PATIENT exist or not
-         *
-         * @param email
-         * @param password
-         * @return true/false
-         */
+/*
+    /**
+     * This method to check PATIENT exist or not
+     *
+     * @param email
+     * @param password
+     * @return true/false
+     */
     public boolean checkPATIENT(String email, String password) {
 
         // array of columns to fetch
