@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject">
-        <activity android:name=".Staff"></activity>
+        <activity android:name=".index_reservation"></activity>
+        <activity android:name=".Staff" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".IndexMedecin" />
         <activity android:name=".MainActivity">
