@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/imageViewP"
+        android:layout_width="150dp"
+        android:layout_height="143dp"
+        android:src="@drawable/images"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtVcin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewP"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+        android:text="CIN : " />
+
+    <EditText
+        android:id="@+id/TxtCinP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewP"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="33dp"
+        android:layout_toRightOf="@+id/txtVcin"
+        android:ems="10"
+        android:hint=""
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:inputType="none"
+        />
+
+    <TextView
+        android:id="@+id/txtVnom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVcin"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+        android:text="NOM : " />
+
+    <EditText
+        android:id="@+id/TxtVnom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtCinP"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/txtVnom"
+        android:ems="10"
+        android:hint=""
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:inputType="none" />
+    <TextView
+        android:id="@+id/txtVPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVnom"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="18dp"
+        android:text="PRENOM : " />
+
+    <EditText
+        android:id="@+id/TxtVPrenom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtVnom"
+        android:layout_marginLeft="58dp"
+        android:layout_marginTop="19dp"
+        android:layout_toRightOf="@+id/txtVnom"
+        android:ems="10"
+        android:hint=""
+        android:focusable="false"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:inputType="none"
+        android:text=""
+        />
+
+    <TextView
+        android:id="@+id/txtVDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVPrenom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="38dp"
+        android:text="DATE DE NAISSANCE : "
+        android:textSize="18dp" />
+
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtVPrenom"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@+id/txtVDate"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/txtVemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVPrenom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="106dp"
+        android:text="EMAIL : "
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/editTxtVemail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtVnom"
+        android:layout_marginLeft="103dp"
+        android:layout_marginTop="159dp"
+        android:layout_toRightOf="@+id/txtVnom"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint=""
+        android:inputType="none"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtVpasswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVPrenom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="176dp"
+        android:text="PASSWORD : "
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edittxtVpasswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtVnom"
+        android:layout_marginLeft="107dp"
+        android:layout_marginTop="233dp"
+        android:layout_toRightOf="@+id/txtVnom"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint=""
+        android:inputType="none"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtVphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtVPrenom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="243dp"
+        android:text="NUM TEL : "
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/edittxtVphone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtVnom"
+        android:layout_marginLeft="104dp"
+        android:layout_marginTop="300dp"
+        android:layout_toRightOf="@+id/txtVnom"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint=""
+        android:inputType="none"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btn_confirmUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextDate"
+        android:layout_alignStart="@+id/txtVDate"
+        android:layout_alignLeft="@+id/txtVDate"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="659dp"
+        android:background="#8595B4"
+        android:text="Confirmer"
+        android:textColor="@color/white"
+        tools:ignore="UnknownId">
+
+    </Button>
+
+</RelativeLayout>

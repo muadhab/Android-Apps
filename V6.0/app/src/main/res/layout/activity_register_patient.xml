@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_patient"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/corona2"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:paddingVertical="35dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="-4dp" />
+
+    <TextView
+        android:layout_width="393dp"
+        android:layout_height="106dp"
+        android:fontFamily="cursive"
+        android:gravity="center_horizontal"
+        android:paddingVertical="35dp"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="#1D4BE6"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="164dp" />
+
+    <EditText
+        android:id="@+id/TxtPUser"
+        android:layout_width="match_parent"
+
+        android:layout_height="66dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint=" Email"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+
+    <EditText
+        android:id="@+id/TxtPNom"
+        android:layout_width="match_parent"
+
+        android:layout_height="66dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint=" Nom"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <EditText
+        android:id="@+id/TxtPpreom"
+        android:layout_width="match_parent"
+
+        android:layout_height="66dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint=" Prenom"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="434dp" />
+
+    <EditText
+        android:id="@+id/TxtPNumtel"
+        android:layout_width="match_parent"
+
+        android:layout_height="66dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint=" Num Tel"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="551dp" />
+
+    <EditText
+        android:id="@+id/TxtPpsd"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginHorizontal="30dp"
+        android:hint="Mot de passe"
+        android:inputType="textPassword"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="20dp"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <Button
+        android:id="@+id/Btn_RegisterP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="@drawable/button_bg"
+        android:text="register"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <EditText
+        android:id="@+id/TextDate2"
+        android:layout_width="359dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Date de naissance"
+        android:inputType="date"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="491dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
